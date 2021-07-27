@@ -225,20 +225,24 @@ class RecommendationDetailsScreen extends StatelessWidget {
           ),
         ),
         _appBar(context),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            height: 100.h,
-            child: BottomNav(
-              height: 64.h,
-              width: 248.w,
-              size1: 54.w,
-              size2: 50.w,
-              size3: 54.w,
-            ),
-          ),
-        ),
+        _bottomBar(),
       ],
     ));
+  }
+
+  Widget _bottomBar() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        height: 137.h,
+        child: BottomNav(
+          height: 64.h,
+          width: 248.w,
+          size1: 54.w,
+          size2: 50.w,
+          size3: 54.w,
+        ),
+      ),
+    );
   }
 }
