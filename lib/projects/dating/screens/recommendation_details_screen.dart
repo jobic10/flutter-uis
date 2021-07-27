@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_uis/projects/dating/widgets/bottom_nav.dart';
 import 'package:flutter_uis/projects/dating/widgets/interest_card.dart';
 
 class RecommendationDetailsScreen extends StatelessWidget {
@@ -40,10 +41,10 @@ class RecommendationDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Stack(
-        children: [
-          Column(
+        body: Stack(
+      children: [
+        SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Align(
@@ -222,9 +223,22 @@ class RecommendationDetailsScreen extends StatelessWidget {
               ),
             ],
           ),
-          _appBar(context),
-        ],
-      ),
+        ),
+        _appBar(context),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: 100.h,
+            child: BottomNav(
+              height: 64.h,
+              width: 248.w,
+              size1: 54.w,
+              size2: 50.w,
+              size3: 54.w,
+            ),
+          ),
+        ),
+      ],
     ));
   }
 }
