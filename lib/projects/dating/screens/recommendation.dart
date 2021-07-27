@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_uis/projects/dating/screens/recommendation_details_screen.dart';
 import 'package:flutter_uis/projects/dating/widgets/bottom_nav.dart';
 
 class RecommendationScreen extends StatelessWidget {
@@ -16,57 +17,63 @@ class RecommendationScreen extends StatelessWidget {
         body: Column(
           children: [
             _appBar(),
-            Stack(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/dating/images/rose.png',
-                    width: 366.w,
-                    height: 622.h,
-                    fit: BoxFit.cover,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => RecommendationDetailsScreen()));
+              },
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'assets/dating/images/rose.png',
+                      width: 366.w,
+                      height: 622.h,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                Positioned(
-                  right: 0,
-                  bottom: 40.h,
-                  child: Container(
-                    width: 342.w,
-                    height: 104.h,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.9),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(20),
-                        topLeft: Radius.circular(20),
+                  Positioned(
+                    right: 0,
+                    bottom: 40.h,
+                    child: Container(
+                      width: 342.w,
+                      height: 104.h,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.9),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          topLeft: Radius.circular(20),
+                        ),
+                      ),
+                      padding: EdgeInsets.only(
+                        left: 22.w,
+                        top: 24.h,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Akinola Roseline, 24',
+                            style: TextStyle(
+                              fontSize: 24.sp,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Full Stack Developer',
+                            style: TextStyle(
+                              fontSize: 16.sp,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    padding: EdgeInsets.only(
-                      left: 22.w,
-                      top: 24.h,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Akinola Roseline, 24',
-                          style: TextStyle(
-                            fontSize: 24.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          'Full Stack Developer',
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
             Container(
               height: 100.h,
