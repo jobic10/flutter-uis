@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uis/projects/dating/screens/recommendation.dart';
+import 'package:flutter_uis/projects/stag/screens/stag.dart';
 
 import 'projects/dating/screens/screen.dart';
 
@@ -55,6 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => ScreenApp()));
+            },
+          ),
+          ListTile(
+            title: Text('Staggered'),
+            leading: Icon(Icons.favorite),
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => StagApp()));
             },
           ),
         ],
