@@ -17,11 +17,6 @@ class Place {
           subtitle: "Costa Rica",
           imageUrl: 'assets/general/1.jpg'),
       Place(
-          height: 240,
-          title: "Rai Forest",
-          subtitle: "Costa Rica",
-          imageUrl: 'assets/general/1.jpg'),
-      Place(
           height: 150,
           title: "Rai Forest",
           subtitle: "Costa Rica",
