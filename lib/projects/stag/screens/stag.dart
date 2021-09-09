@@ -11,11 +11,12 @@ class StagApp extends StatelessWidget {
     final placeList = Place.generatePlaces();
     return Scaffold(
       body: Container(
+        color: Colors.red,
         child: StaggeredGridView.countBuilder(
           shrinkWrap: true,
-          crossAxisCount: 4,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
+          crossAxisCount: 5,
+          crossAxisSpacing: 2,
+          mainAxisSpacing: 5,
           physics: ScrollPhysics(),
           itemCount: placeList.length,
           itemBuilder: (BuildContext context, int index) => PlaceItem(

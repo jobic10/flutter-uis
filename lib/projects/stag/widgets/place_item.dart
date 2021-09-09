@@ -17,7 +17,6 @@ class PlaceItem extends StatelessWidget {
         ),
       ),
       height: place.height,
-      // width: 200,
       alignment: Alignment.bottomLeft,
       child: Padding(
         padding: const EdgeInsets.symmetric(
